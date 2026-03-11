@@ -42,11 +42,17 @@
             this.Abrilho = new System.Windows.Forms.Button();
             this.BrilhoDown = new System.Windows.Forms.NumericUpDown();
             this.Dbrilho = new System.Windows.Forms.Button();
+            this.MultiplicarImagem = new System.Windows.Forms.Button();
+            this.ValorMultip = new System.Windows.Forms.NumericUpDown();
+            this.ValorDiv = new System.Windows.Forms.NumericUpDown();
+            this.DividirImagem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrilhoUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrilhoDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValorMultip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValorDiv)).BeginInit();
             this.SuspendLayout();
             // 
             // btCarregarImagem
@@ -65,6 +71,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(202, 161);
@@ -74,6 +81,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(931, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(202, 161);
@@ -103,6 +111,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Location = new System.Drawing.Point(280, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(202, 161);
@@ -132,15 +141,16 @@
             // 
             // BrilhoUp
             // 
-            this.BrilhoUp.Location = new System.Drawing.Point(499, 30);
+            this.BrilhoUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BrilhoUp.Location = new System.Drawing.Point(499, 12);
             this.BrilhoUp.Name = "BrilhoUp";
-            this.BrilhoUp.Size = new System.Drawing.Size(120, 20);
+            this.BrilhoUp.Size = new System.Drawing.Size(94, 20);
             this.BrilhoUp.TabIndex = 8;
             this.BrilhoUp.ValueChanged += new System.EventHandler(this.BrilhoUp_ValueChanged);
             // 
             // Abrilho
             // 
-            this.Abrilho.Location = new System.Drawing.Point(643, 20);
+            this.Abrilho.Location = new System.Drawing.Point(617, 2);
             this.Abrilho.Name = "Abrilho";
             this.Abrilho.Size = new System.Drawing.Size(163, 37);
             this.Abrilho.TabIndex = 9;
@@ -150,15 +160,15 @@
             // 
             // BrilhoDown
             // 
-            this.BrilhoDown.Location = new System.Drawing.Point(499, 85);
+            this.BrilhoDown.Location = new System.Drawing.Point(499, 55);
             this.BrilhoDown.Name = "BrilhoDown";
-            this.BrilhoDown.Size = new System.Drawing.Size(120, 20);
+            this.BrilhoDown.Size = new System.Drawing.Size(94, 20);
             this.BrilhoDown.TabIndex = 10;
             this.BrilhoDown.ValueChanged += new System.EventHandler(this.BrilhoDown_ValueChanged);
             // 
             // Dbrilho
             // 
-            this.Dbrilho.Location = new System.Drawing.Point(643, 75);
+            this.Dbrilho.Location = new System.Drawing.Point(617, 45);
             this.Dbrilho.Name = "Dbrilho";
             this.Dbrilho.Size = new System.Drawing.Size(163, 37);
             this.Dbrilho.TabIndex = 11;
@@ -166,11 +176,51 @@
             this.Dbrilho.UseVisualStyleBackColor = true;
             this.Dbrilho.Click += new System.EventHandler(this.Dbrilho_Click);
             // 
+            // MultiplicarImagem
+            // 
+            this.MultiplicarImagem.Location = new System.Drawing.Point(617, 88);
+            this.MultiplicarImagem.Name = "MultiplicarImagem";
+            this.MultiplicarImagem.Size = new System.Drawing.Size(163, 37);
+            this.MultiplicarImagem.TabIndex = 12;
+            this.MultiplicarImagem.Text = "Mutiplicar";
+            this.MultiplicarImagem.UseVisualStyleBackColor = true;
+            this.MultiplicarImagem.Click += new System.EventHandler(this.MultiplicarImagem_Click);
+            // 
+            // ValorMultip
+            // 
+            this.ValorMultip.Location = new System.Drawing.Point(499, 98);
+            this.ValorMultip.Name = "ValorMultip";
+            this.ValorMultip.Size = new System.Drawing.Size(94, 20);
+            this.ValorMultip.TabIndex = 13;
+            this.ValorMultip.ValueChanged += new System.EventHandler(this.ValorMultip_ValueChanged);
+            // 
+            // ValorDiv
+            // 
+            this.ValorDiv.Location = new System.Drawing.Point(499, 141);
+            this.ValorDiv.Name = "ValorDiv";
+            this.ValorDiv.Size = new System.Drawing.Size(94, 20);
+            this.ValorDiv.TabIndex = 14;
+            this.ValorDiv.ValueChanged += new System.EventHandler(this.ValorDiv_ValueChanged);
+            // 
+            // DividirImagem
+            // 
+            this.DividirImagem.Location = new System.Drawing.Point(617, 131);
+            this.DividirImagem.Name = "DividirImagem";
+            this.DividirImagem.Size = new System.Drawing.Size(163, 37);
+            this.DividirImagem.TabIndex = 15;
+            this.DividirImagem.Text = "Dividir";
+            this.DividirImagem.UseVisualStyleBackColor = true;
+            this.DividirImagem.Click += new System.EventHandler(this.DividirImagem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 562);
+            this.Controls.Add(this.DividirImagem);
+            this.Controls.Add(this.ValorDiv);
+            this.Controls.Add(this.ValorMultip);
+            this.Controls.Add(this.MultiplicarImagem);
             this.Controls.Add(this.Dbrilho);
             this.Controls.Add(this.BrilhoDown);
             this.Controls.Add(this.Abrilho);
@@ -190,6 +240,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrilhoUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrilhoDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValorMultip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValorDiv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,6 +262,10 @@
         private System.Windows.Forms.Button Abrilho;
         private System.Windows.Forms.NumericUpDown BrilhoDown;
         private System.Windows.Forms.Button Dbrilho;
+        private System.Windows.Forms.Button MultiplicarImagem;
+        private System.Windows.Forms.NumericUpDown ValorMultip;
+        private System.Windows.Forms.NumericUpDown ValorDiv;
+        private System.Windows.Forms.Button DividirImagem;
     }
 }
 

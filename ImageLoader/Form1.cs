@@ -19,6 +19,7 @@ namespace ImageLoader
         Bitmap img3;
         Bitmap img4;
         int brilhoAtual = 0;
+        float valorCalculo = 0;
         byte[,] somarsomarR;
         byte[,] somarsomarG;
         byte[,] somarsomarB;
@@ -34,10 +35,10 @@ namespace ImageLoader
 
         public Form1()
         {
-           
+
             InitializeComponent();
         }
-        
+
 
         private void btCarregarImagem_Click(object sender, EventArgs e)
         {
@@ -158,7 +159,7 @@ namespace ImageLoader
             }
         }
 
-      
+
         private void carregar2_Click(object sender, EventArgs e)
         {
             var filePath = string.Empty;
@@ -230,6 +231,7 @@ namespace ImageLoader
             }
 
             pictureBox2.Image = img4;
+            img2 = img4;
         }
 
         private void btSubtImagem_Click(object sender, EventArgs e)
@@ -257,20 +259,21 @@ namespace ImageLoader
                     int R = pixel.R - pixel3.R;
                     int G = pixel.G - pixel3.G;
                     int B = pixel.B - pixel3.B;
-                   
+
 
                     if (R < 0) R = 0;
                     if (G < 0) G = 0;
                     if (B < 0) B = 0;
-                
 
-                    Color cor = Color.FromArgb( R, G, B);
+
+                    Color cor = Color.FromArgb(R, G, B);
 
                     img4.SetPixel(i, j, cor);
                 }
             }
 
             pictureBox2.Image = img4;
+            img2 = img4;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -296,12 +299,13 @@ namespace ImageLoader
             }
 
             pictureBox2.Image = resultado;
+            img2 = resultado;
         }
-         
-        
 
-      
-private void BrilhoUp_ValueChanged(object sender, EventArgs e)
+
+
+
+        private void BrilhoUp_ValueChanged(object sender, EventArgs e)
         {
             brilhoAtual = (int)BrilhoUp.Value;
         }
@@ -329,14 +333,130 @@ private void BrilhoUp_ValueChanged(object sender, EventArgs e)
                     if (G < 0) G = 0;
                     if (B < 0) B = 0;
 
+
                     resultado.SetPixel(i, j, Color.FromArgb(R, G, B));
                 }
             }
 
             pictureBox2.Image = resultado;
+            img2 = resultado;
+        }
+
+       
+
+        private void MultiplicarImagem_Click(object sender, EventArgs e)
+        {
+            Bitmap resultado = new Bitmap(img1.Width, img1.Height);
+
+            for (int i = 0; i < img1.Width; i++)
+            {
+                for (int j = 0; j < img1.Height; j++)
+                {
+                    Color pixel = img1.GetPixel(i, j);
+
+                    int R = (int)(pixel.R * valorCalculo);
+                    int G = (int)(pixel.G * valorCalculo);
+                    int B = (int)(pixel.B * valorCalculo);
+
+                    if (R < 0) R = 0;
+                    if (G < 0) G = 0;
+                    if (B < 0) B = 0;
+
+
+                    if (R > 255) R = 255;
+                    if (G > 255) G = 255;
+                    if (B > 255) B = 255;
+
+                    resultado.SetPixel(i, j, Color.FromArgb(R, G, B));
+                }
+            }
+
+            pictureBox2.Image = resultado;
+            img2 = resultado;
+        }
+
+        private void ValorMultip_ValueChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                valorCalculo = (float)ValorMultip.Value;
+
+
+                if (valorCalculo < 0.1 || valorCalculo > 1.5)
+                {
+                    throw new Exception("Valor fora do intervalo permitido (0.1 - 1.5)");
+                }
+            }
+            catch (Exception ex1)
+            {
+                MessageBox.Show(ex1.Message, "Insira um valor entre 0.1 e 1.5", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+        
+    }
+
+        private void ValorDiv_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                valorCalculo = (float)ValorDiv.Value;
+
+
+                if (valorCalculo < 0.1 || valorCalculo > 1.5)
+                {
+                    throw new Exception("Valor fora do intervalo permitido (0.1 - 1.5)");
+                }
+            }
+            catch (Exception ex1)
+            {
+                MessageBox.Show(ex1.Message, "Insira um valor entre 0.1 e 1.5", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void DividirImagem_Click(object sender, EventArgs e)
+        {
+
+            if (valorCalculo == 0)
+            {
+                MessageBox.Show("O valor de divisão não pode ser 0.");
+                return;
+            }
+
+            Bitmap resultado = new Bitmap(img1.Width, img1.Height);
+
+            for (int i = 0; i < img1.Width; i++)
+            {
+                for (int j = 0; j < img1.Height; j++)
+                {
+                    Color pixel = img1.GetPixel(i, j);
+
+                    int R = (int)(pixel.R / valorCalculo);
+                    int G = (int)(pixel.G / valorCalculo);
+                    int B = (int)(pixel.B / valorCalculo);
+
+                    if (R < 0) R = 0;
+                    if (G < 0) G = 0;
+                    if (B < 0) B = 0;
+
+                    if (R > 255) R = 255;
+                    if (G > 255) G = 255;
+                    if (B > 255) B = 255;
+
+                    resultado.SetPixel(i, j, Color.FromArgb(R, G, B));
+                }
+            }
+
+            pictureBox2.Image = resultado;
+            img2 = resultado;
         }
     }
-    }
+    
+}
+    
 
         
     

@@ -8,3 +8,13 @@ C:\Users\monte\Downloads\ImageLoader_original\ImageLoader\ImageLoader\obj\Debug\
 C:\Users\monte\Downloads\ImageLoader_original\ImageLoader\ImageLoader\obj\Debug\ImageLoader.csproj.CoreCompileInputs.cache
 C:\Users\monte\Downloads\ImageLoader_original\ImageLoader\ImageLoader\obj\Debug\ImageLoader.exe
 C:\Users\monte\Downloads\ImageLoader_original\ImageLoader\ImageLoader\obj\Debug\ImageLoader.pdb
+D:\Music\Miguel\CoresConverter\ImageLoader\obj\Debug\ImageLoader.csproj.AssemblyReference.cache
+D:\Music\Miguel\CoresConverter\ImageLoader\obj\Debug\ImageLoader.Form1.resources
+D:\Music\Miguel\CoresConverter\ImageLoader\obj\Debug\ImageLoader.Properties.Resources.resources
+D:\Music\Miguel\CoresConverter\ImageLoader\obj\Debug\ImageLoader.csproj.GenerateResource.cache
+D:\Music\Miguel\CoresConverter\ImageLoader\obj\Debug\ImageLoader.csproj.CoreCompileInputs.cache
+D:\Music\Miguel\CoresConverter\ImageLoader\obj\Debug\ImageLoader.exe
+D:\Music\Miguel\CoresConverter\ImageLoader\obj\Debug\ImageLoader.pdb
+D:\Music\Miguel\CoresConverter\ImageLoader\bin\Debug\ImageLoader.exe.config
+D:\Music\Miguel\CoresConverter\ImageLoader\bin\Debug\ImageLoader.exe
+D:\Music\Miguel\CoresConverter\ImageLoader\bin\Debug\ImageLoader.pdb
