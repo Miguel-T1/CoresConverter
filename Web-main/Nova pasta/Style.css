@@ -1,0 +1,86 @@
+body{
+margin:0;
+font-family:Arial;
+background-color: rgba(181, 184, 181, 0.637);
+
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+header{
+background-color:#251;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background-color: rgb(58, 94, 47);
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-right:20px;
+font-size:18px;
+}
+
+nav ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.textomenor{
+font-size:20px;
+font-family:Arial;
+margin-left:20px;
+}
+
+.textomenor2{
+font-size:15px;
+font-family:Arial;
+margin-left:20px;
+}
+
+.textogrande{
+font-size:30px;
+font-family:Arial;
+margin-left:20px;
+}
+
+footer{
+background-color:#222;
+color:white;
+padding:15px;
+text-align:center;
+margin-top:auto;
+}
+
+.alinhar{
+text-align:center;
+}
+
+/* FORMULÁRIO */
+
+.formulario{
+width:300px;
+margin-left:20px;
+}
+
+.campo{
+display:flex;
+align-items:center;
+margin-bottom:8px;
+}
+
+.campo label{
+width:90px;
+}
+
+.campo input{
+flex:1;
+}
